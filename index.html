@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Online Kod Yaz</title>
+  </head>
+  <body>
+    <div class="d-flex w-100 min-vh-100 m-0">
+      <div class="left">
+        <div class="d-flex justify-content-between card-header">
+          <span>Online Compiler</span>
+          <div><button type="button" class="btn btn-success">Run</button></div>
+        </div>
+        <div class="editor" contenteditable="">hele</div>
+      </div>
+      <div class="middle"></div>
+      <div class="right">
+        <div class="card-header">Output Here</div>
+        <iframe src="" frameborder="0" class="iframe"></iframe>
+      </div>
+    </div>
+
+    <script src="js/drag.js"></script>
+  </body>
+</html>
