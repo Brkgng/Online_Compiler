@@ -22,17 +22,36 @@
       <div class="left">
         <div class="d-flex justify-content-between card-header">
           <span>Online Compiler</span>
-          <div><button type="button" class="btn btn-success">Run</button></div>
+          <div class="d-flex">
+            <select
+              id="language"
+              class="form-select"
+              onchange="changeLanguage()"
+            >
+              <option selected>Select Language</option>
+              <option value="cpp">C/C++</option>
+              <option value="python">Python</option>
+              <option value="node">Javascript</option>
+              <option value="php">Php</option>
+            </select>
+            <button type="button" class="btn btn-success ms-3" onclick="run()">
+              Run
+            </button>
+          </div>
         </div>
-        <div class="editor" contenteditable="">hele</div>
+        <div id="editor" class="editor"></div>
       </div>
       <div class="middle"></div>
       <div class="right">
         <div class="card-header">Output Here</div>
-        <iframe src="" frameborder="0" class="iframe"></iframe>
+        <iframe id="output" src="" frameborder="0" class="iframe"></iframe>
       </div>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
     <script src="js/drag.js"></script>
+    <script src="js/ide.js"></script>
   </body>
 </html>
