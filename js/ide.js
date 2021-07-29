@@ -28,10 +28,10 @@ function changeLanguage() {
 		case "cpp":
 			editor.session.setMode("ace/mode/c_cpp");
 			break;
-		case "python":
+		case "py":
 			editor.session.setMode("ace/mode/python");
 			break;
-		case "node":
+		case "js":
 			editor.session.setMode("ace/mode/javascript");
 			break;
 		case "php":
