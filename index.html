@@ -15,22 +15,52 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Online Kod Yaz</title>
   </head>
   <body>
-    <div class="d-flex w-100 min-vh-100 m-0">
-      <div class="left">
+    <div class="d-flex flex-column w-100 vh-100 m-0">
+      <div class="top">
         <div class="d-flex justify-content-between card-header">
-          <span>Online Compiler</span>
+          <span class="title">Online Compiler</span>
           <div class="d-flex">
+            <select
+              id="theme"
+              class="form-select me-3"
+              onchange="changeTheme()"
+            >
+              <optgroup label="Açık Temalar">
+                <option value="solarized_light">Solarized Light</option>
+                <option value="clouds">Clouds</option>
+                <option value="dreamweaver">Dreamweaver</option>
+                <option value="eclipse">Eclipse</option>
+                <option value="github">Github</option>
+              </optgroup>
+
+              <optgroup label="Koyu Temalar">
+                <option value="tomorrow_night">Tomorrow Night</option>
+                <option value="monokai">Monokai</option>
+                <option value="twilight">Twilight</option>
+                <option value="dracula">Dracula</option>
+                <option value="nord_dark">Nord Dark</option>
+                <option value="solarized_dark" selected>Solarized Dark</option>
+                <option value="ambiance">Ambiance</option>
+                <option value="chaos">Chaos</option>
+              </optgroup>
+            </select>
             <select
               id="language"
               class="form-select"
               onchange="changeLanguage()"
             >
-              <option selected>Select Language</option>
+              <option value="py" selected>Python</option>
               <option value="cpp">C/C++</option>
-              <option value="py">Python</option>
               <option value="js">Javascript</option>
               <option value="php">Php</option>
             </select>
@@ -41,17 +71,27 @@
         </div>
         <div id="editor" class="editor"></div>
       </div>
-      <div class="middle"></div>
-      <div class="right">
-        <div class="card-header">Output Here</div>
+      <div class="bottom">
+        <div class="card-header"><b>Output</b></div>
         <div id="output" class="output"></div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-clouds.js"></script>
+    <script src="js/lib/theme-dreamweaver.js"></script>
+    <script src="js/lib/theme-eclipse.js"></script>
+    <script src="js/lib/theme-github.js"></script>
+    <script src="js/lib/theme-solarized_light.js"></script>
+    <script src="js/lib/theme-tomorrow_night.js"></script>
     <script src="js/lib/theme-monokai.js"></script>
-    <script src="js/drag.js"></script>
+    <script src="js/lib/theme-twilight.js"></script>
+    <script src="js/lib/theme-dracula.js"></script>
+    <script src="js/lib/theme-nord_dark.js"></script>
+    <script src="js/lib/theme-solarized_dark.js"></script>
+    <script src="js/lib/theme-ambiance.js"></script>
+    <script src="js/lib/theme-chaos.js"></script>
     <script src="js/ide.js"></script>
   </body>
 </html>

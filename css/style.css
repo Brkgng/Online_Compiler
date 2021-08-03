@@ -4,26 +4,31 @@
   box-sizing: border-box;
 }
 
-.left,
-.right {
-  width: 70%;
-  border: 1px solid black;
+.title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 25px;
 }
 
-.right {
-  flex: 1;
+.bottom {
+  height: 30%;
 }
 
-.middle {
-  width: 4px;
-  cursor: w-resize;
-}
-
-.left {
-  min-width: 400px !important;
+.top {
+  height: 70%;
 }
 
 .editor {
   outline: none;
-  height: 100%;
+  font-size: 20px;
+  height: calc(100% - 55px);
+}
+
+.output {
+  height: 80%;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+#theme {
+  min-width: 170px;
 }

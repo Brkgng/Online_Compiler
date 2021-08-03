@@ -20,7 +20,7 @@ switch ($language) {
 		echo shell_exec("node $filePath 2>&1");
 		break;
 	case 'cpp':
-		shell_exec("gcc $filePath -o $random.exe");
+		shell_exec("g++ $filePath -o $random.exe");
 		echo shell_exec(__DIR__ . "//$random.exe");
 		break;
 }
