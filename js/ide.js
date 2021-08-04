@@ -5,12 +5,16 @@ let output = document.getElementById("output");
 function initEditor() {
 	editor = ace.edit("editor");
 	editor.setTheme("ace/theme/solarized_dark");
-	editor.session.setMode("ace/mode/c_cpp");
+	editor.session.setMode("ace/mode/python");
+	editor.setOptions({
+		enableBasicAutocompletion: true,
+		enableLiveAutocompletion: true,
+		showPrintMargin: false,
+		fontSize: "20",
+	});
 	changeOutputTheme();
 	output.style.color = "white";
 
-	let editorPrintMargin = document.getElementsByClassName("ace_print-margin")[0];
-	editorPrintMargin.classList.remove("ace_print-margin");
 }
 
 function run() {
@@ -107,6 +111,10 @@ function changeOutputTheme(dark_theme) {
 	} else {
 		output.style.color = "black";
 	}
+}
+
+function showSettingsMenu() {
+	editor.execCommand("showSettingsMenu");
 }
 
 initEditor();

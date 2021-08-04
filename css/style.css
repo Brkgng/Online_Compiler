@@ -10,11 +10,11 @@
 }
 
 .bottom {
-  height: 30%;
+  height: 25%;
 }
 
 .top {
-  height: 70%;
+  height: 75%;
 }
 
 .editor {
@@ -24,7 +24,7 @@
 }
 
 .output {
-  height: 80%;
+  height: calc(100% - 41px);
   padding-left: 10px;
   font-size: 20px;
 }

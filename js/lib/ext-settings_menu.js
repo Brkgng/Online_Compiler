@@ -442,16 +442,6 @@ var modes = modelist.modes.map(function(x){
 
 var optionGroups = {
     Main: {
-        Mode: {
-            path: "mode",
-            type: "select",
-            items: modes
-        },
-        Theme: {
-            path: "theme",
-            type: "select",
-            items: themes
-        },
         "Keybinding": {
             type: "buttonBar",
             path: "keyboardHandler",
@@ -639,7 +629,6 @@ var OptionPanel = function(editor, element) {
                     this.renderOptionGroup(optionGroups.More)
                 ]
             ]],
-            ["tr", null, ["td", {colspan: 2}, "version " + config.version]]
         ], this.container);
     };
     

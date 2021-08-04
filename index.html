@@ -64,9 +64,18 @@
               <option value="js">Javascript</option>
               <option value="php">Php</option>
             </select>
-            <button type="button" class="btn btn-success ms-3" onclick="run()">
+            <button type="button" class="btn btn-success mx-3" onclick="run()">
               Run
             </button>
+            <div class="navbar-light">
+              <button
+                class="navbar-toggler"
+                type="button"
+                onclick="showSettingsMenu()"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
           </div>
         </div>
         <div id="editor" class="editor"></div>
