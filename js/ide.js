@@ -5,7 +5,7 @@ let output = document.getElementById("output");
 function initEditor() {
 	editor = ace.edit("editor");
 	editor.setTheme("ace/theme/solarized_dark");
-	editor.session.setMode("ace/mode/python");
+	editor.session.setMode("ace/mode/php");
 	editor.setOptions({
 		enableBasicAutocompletion: true,
 		enableLiveAutocompletion: true,
@@ -18,6 +18,7 @@ function initEditor() {
 }
 
 function run() {
+	output.innerText = "";
 	$.ajax({
 		url: "/app/compiler.php",
 		method: "POST",
@@ -25,9 +26,11 @@ function run() {
 			language: document.getElementById("language").value,
 			code: editor.getSession().getValue()
 		},
-
 		success: function(response) {
-			document.getElementById("output").innerText = response;
+			if (response)
+				output.innerText = response;
+			else
+				output.innerText = "Syntax Error."
 		}
 	})
 }
@@ -36,18 +39,20 @@ function changeLanguage() {
 	const language = document.getElementById("language").value;
 
 	switch (language) {
+		case "php":
+			editor.session.setMode("ace/mode/php");
+			break;
 		case "cpp":
 			editor.session.setMode("ace/mode/c_cpp");
 			break;
 		case "py":
 			editor.session.setMode("ace/mode/python");
 			break;
-		case "js":
-			editor.session.setMode("ace/mode/javascript");
-			break;
-		case "php":
-			editor.session.setMode("ace/mode/php");
-			break;
+
+			// More languages can be add like this
+		// case "js":
+		// 	editor.session.setMode("ace/mode/javascript");
+		// 	break;
 	}
 }
 

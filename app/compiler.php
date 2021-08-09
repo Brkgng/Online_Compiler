@@ -10,17 +10,17 @@ fclose($writeFile);
 
 switch ($language) {
 	case 'php':
+		// php added in languages folder
+		// More languages can be added by giving path
 		$path = realpath("../language/php/php.exe");
 		echo shell_exec("$path $filePath 2>&1");
 		break;
-	case 'py':
-		echo shell_exec("C:\Users\PC\AppData\Local\Programs\Python\Python39\python.exe $filePath 2>&1");
-		break;
-	case 'node':
-		echo shell_exec("node $filePath 2>&1");
-		break;
 	case 'cpp':
-		shell_exec("g++ $filePath -o $random.exe");
-		echo shell_exec(__DIR__ . "//$random.exe");
+		shell_exec("g++ $filePath -o temp/$random.exe");
+		echo shell_exec(__DIR__ . "/temp/$random.exe");
+		break;
+
+	case 'py':	// Modify path when using your local
+		echo shell_exec("C:\Users\PC\AppData\Local\Programs\Python\Python39\python.exe $filePath 2>&1");
 		break;
 }

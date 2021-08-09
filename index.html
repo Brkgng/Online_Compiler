@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
 
-    <title>Online Kod Yaz</title>
+    <title>Online Compiler</title>
   </head>
   <body>
     <div class="d-flex flex-column w-100 vh-100 m-0">
@@ -59,10 +59,10 @@
               class="form-select"
               onchange="changeLanguage()"
             >
-              <option value="py" selected>Python</option>
+              <!-- Python can be use by giving path. Look at app/compiler.php -->
+              <!-- <option value="py">Python</option> -->
+              <option value="php" selected>Php</option>
               <option value="cpp">C/C++</option>
-              <option value="js">Javascript</option>
-              <option value="php">Php</option>
             </select>
             <button type="button" class="btn btn-success mx-3" onclick="run()">
               Run
