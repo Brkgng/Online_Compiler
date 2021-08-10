@@ -6,20 +6,17 @@ An online compiler that compiles and runs Php, Python, C, C++. More languages ca
 
 ## Screenshot
 
----
-
 ![Website Image](img/website.PNG)
 
 ## To run on localhost
-
----
 
 ```
 git clone https://github.com/Brkgng/Online_Compiler.git
 ```
 
 ```
-If you are using Xampp then you have to move Online-Compiler folder to htdocs of Xampp. If you are using only Apache Server then move to www folder.
+If you are using Xampp then you have to move Online-Compiler folder to htdocs of Xampp.
+If you are using only Apache Server then move to www folder.
 ```
 
 ```
